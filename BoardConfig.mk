@@ -22,7 +22,7 @@ TARGET_SPECIFIC_HEADER_PATH += device/sony/flamingo/include
 
 # Kernel properties
 TARGET_KERNEL_SOURCE := kernel/sony/flamingo
-TARGET_KERNEL_CONFIG := cm_arima_8926ss_sp_defconfig
+TARGET_KERNEL_CONFIG := cm_arima_8226ss_sp_defconfig
 TARGET_DTB_EXTRA_FLAGS := --force-v2
 
 # Hardware Features
