@@ -22,7 +22,7 @@ $(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
 # Build fingerprints
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=D2203 BUILD_FINGERPRINT=Sony/D2203/D2203:4.4.2/18.4.C.1.29/4nv_bQ:user/release-keys PRIVATE_BUILD_DESC="D2203-user 4.4.2 18.4.C.1.29 4nv_bQ release-keys"
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=D2212 BUILD_FINGERPRINT=Sony/D2212/D2212:4.4.4/18.5.B.0.26/4nv_bQ:user/release-keys PRIVATE_BUILD_DESC="D2212-user 4.4.4 18.5.B.0.26 4nv_bQ release-keys"
 
 PRODUCT_NAME := cm_flamingo
 PRODUCT_DEVICE := flamingo
