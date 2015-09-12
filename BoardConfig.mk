@@ -37,4 +37,11 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 1879030784
 
 # Recovery
 TARGET_RECOVERY_FSTAB := device/sony/flamingo/rootdir/fstab.qcom
-BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_10x18.h\"
+BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_15x24.h\"
+DEVICE_RESOLUTION := 480x854
+RECOVERY_SDCARD_ON_DATA := true
+TW_DEFAULT_EXTERNAL_STORAGE := true
+PRODUCT_COPY_FILES += device/sony/flamingo/recovery.fstab:recovery/root/etc/recovery.fstab
+PRODUCT_COPY_FILES += device/sony/flamingo/twrp.fstab:recovery/root/etc/twrp.fstab
+PRODUCT_COPY_FILES += device/sony/flamingo/fstab.qcom:recovery/root/fstab.qcom
+
