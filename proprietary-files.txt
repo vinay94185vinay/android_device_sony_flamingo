@@ -86,10 +86,8 @@ etc/firmware/modem.b03
 etc/firmware/modem.b04
 etc/firmware/modem.b05
 etc/firmware/modem.b08
-etc/firmware/modem.b10
 etc/firmware/modem.b11
 etc/firmware/modem.b13
-etc/firmware/modem.b14
 etc/firmware/modem.b15
 etc/firmware/modem.b16
 etc/firmware/modem.b17
@@ -151,7 +149,10 @@ lib/soundfx/libqcompostprocbundle.so
 lib/soundfx/libqcomvisualizer.so
 lib/soundfx/libqcomvoiceprocessing.so
 lib/lib_asb_tee.so
+lib/libcamera_client.so
 lib/libcamera_clientsemc.so
+lib/libcamera_metadata.so
+lib/libcameraservice.so
 lib/libchromatix_imx135_liveshot.so
 lib/libcnefeatureconfig.so
 lib/libkeyctrl.so
