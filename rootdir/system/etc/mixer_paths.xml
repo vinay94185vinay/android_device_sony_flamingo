@@ -206,6 +206,9 @@
     <ctl name="IIR1 Enable Band3" value="0" />
     <ctl name="IIR1 Enable Band4" value="0" />
     <ctl name="IIR1 Enable Band5" value="0" />
+<!-- [All][Main][Voice][DMS][36320][LuboLu] Fix sidetone issue for handset and headset. 20140415 begin -->
+    <!--<ctl name="IIR1 INP1 Volume" value="62" />-->
+<!-- [All][Main][Voice][DMS][36320][LuboLu] 20140415 end -->
     <!-- IIR/voice anc end -->
     <!-- anc handset -->
     <ctl name="ANC Slot" value="0" />
@@ -584,8 +587,40 @@
        <ctl name="Incall_Music Audio Mixer MultiMedia2" value="1" />
    </path>
 
+   <path name="incall_music_uplink bt-sco">
+       <path name="incall_music_uplink" />
+   </path>
+
+   <path name="incall_music_uplink bt-sco-wb">
+       <path name="incall_music_uplink" />
+   </path>
+
+   <path name="incall_music_uplink usb-headphones">
+       <path name="incall_music_uplink" />
+   </path>
+
+   <path name="incall_music_uplink hdmi">
+       <path name="incall_music_uplink" />
+   </path>
+
    <path name="incall_music_uplink2">
        <ctl name="Incall_Music_2 Audio Mixer MultiMedia9" value="1" />
+    </path>
+
+   <path name="incall_music_uplink2 bt-sco">
+       <path name="incall_music_uplink2" />
+   </path>
+
+   <path name="incall_music_uplink2 bt-sco-wb">
+       <path name="incall_music_uplink2" />
+   </path>
+
+   <path name="incall_music_uplink2 usb-headphones">
+       <path name="incall_music_uplink2" />
+   </path>
+
+   <path name="incall_music_uplink2 hdmi">
+       <path name="incall_music_uplink2" />
    </path>
 
     <path name="compress-voip-call">
@@ -645,6 +680,7 @@
         <ctl name="IIR1 INP1 MUX" value="DEC1" />
     </path>
 
+<!-- [All][Main][Audio][DMS][37554][LuboLu] Implement secondary microphone test. 20140507 begin -->
     <path name="adc3">
         <ctl name="AIF1_CAP Mixer SLIM TX1" value="1"/>
         <ctl name="SLIM_0_TX Channels" value="One" />
@@ -660,6 +696,7 @@
     <path name="secondary-mic">
         <path name="adc3" />
     </path>
+<!-- [All][Main][Audio][DMS][37554][LuboLu] 20140507 end -->
 
     <path name="dmic1">
         <ctl name="AIF1_CAP Mixer SLIM TX1" value="1"/>
@@ -685,6 +722,7 @@
         <ctl name="SPK DAC Switch" value="1" />
     </path>
 
+<!-- [ALL][Main][Audio][DMS][Rev.004][36669][LuboLu] HW modify volume gain of FM radio speaker/headphone. 20140421 begin -->
     <path name="speaker-fm">
         <ctl name="SLIM RX1 MUX" value="AIF1_PB" />
         <ctl name="SLIM_0_RX Channels" value="One" />
@@ -694,6 +732,7 @@
         <ctl name="SPK DRV Volume" value="6" />
         <ctl name="SPK DAC Switch" value="1" />
     </path>
+<!-- [ALL][Main][Audio][DMS][Rev.004][36669][LuboLu] 20140421 end -->
 
     <path name="speaker-skuf">
         <ctl name="SLIM RX1 MUX" value="AIF1_PB" />
@@ -729,6 +768,7 @@
         <ctl name="IIR1 Enable Band5" value="1" />
     </path>
 
+<!-- [All][Main][Voice][DMS][36320][LuboLu] Fix sidetone issue for handset and headset. 20140415 begin -->
     <path name="sidetone-headphones">
         <path name="sidetone-iir" />
         <ctl name="IIR1 INP1 Volume" value="0" />
@@ -741,6 +781,7 @@
         <ctl name="IIR1 INP1 Volume" value="0" />
         <ctl name="RX1 MIX2 INP1" value="IIR1" />
     </path>
+<!-- [All][Main][Voice][DMS][36320][LuboLu] 20140415 end -->
 
     <path name="speaker-mic">
         <path name="adc1" />
@@ -790,6 +831,9 @@
         <ctl name="COMP1 Switch" value="1" />
     </path>
 
+<!-- [ALL][Main][Audio][DMS][][LewisChen] HW modify volume gain of headphone. 20140717 begin -->
+<!-- [ALL][Main][Audio][DMS][35859][LuboLu] HW modify volume gain of FM radio speaker/headphone. 20140408 begin -->
+<!-- [ALL][Main][Audio][DMS][35398][LuboLu] Separate FM routing path for volume gain control. 20140327 begin -->
     <path name="headphones-fm">
         <ctl name="RX1 Digital Volume" value="82" />
         <ctl name="RX2 Digital Volume" value="82" />        
@@ -797,6 +841,9 @@
         <ctl name="HPHR Volume" value="7" />
         <path name="headphones-lite" />
     </path>
+<!-- [ALL][Main][Audio][DMS][35398][LuboLu] 20140327 end -->
+<!-- [ALL][Main][Audio][DMS][35859][LuboLu] 20140408 end -->
+<!-- [ALL][Main][Audio][DMS][][LewisChen]   20140717 end -->
 
     <path name="headphones-lite-skuf">
         <path name="headphones-lite" />
@@ -811,9 +858,11 @@
         <path name="handset" />
     </path>
 
+<!-- F[ALL][Main][Audio][DMS][34219][LuboLu] Add audio device for HAC and voice enhancement. 20140225 begin -->
     <path name="voice-handset-mic">
         <path name="handset-mic" />
     </path>
+<!-- F[ALL][Main][Audio][DMS][34219][LuboLu] 20140225 end -->
 
     <path name="voice-handset-tmus">
         <path name="handset" />
@@ -823,9 +872,11 @@
         <path name="speaker" />
     </path>
 
+<!-- [All][Main][Audio][DMS][33468][LuboLu]  FIX VOICE SPEAKER NO SOUND IN CS VERSION. 20140127 begin -->
     <path name="voice-speaker-lite">
         <path name="speaker-lite" />
     </path>
+<!-- [All][Main][Audio][DMS][33468][LuboLu] 20140127 end -->
 
     <path name="voice-speaker-mic">
         <path name="speaker-mic" />
@@ -857,6 +908,8 @@
         <ctl name="COMP0 Switch" value="1" />
     </path>
 
+<!-- [All][Main][Audio][DMS][5495195][LewisChen]  FIX SOUND FROM SPEAKER LACK ONE CHANNEL. 20140526 begin -->   
+<!-- [All][Main][Audio][DMS][5638146][LewisChen]  FIX RINGTONE SOUND IS SMALLER THAN WITHOUT PHF. 20140617 begin -->
     <path name="speaker-and-headphones-lite">
         <path name="headphones-lite" />
         <ctl name="RX3 Digital Volume" value="102" />
@@ -865,6 +918,8 @@
         <ctl name="RX3 MIX1 INP2" value="RX2" />
         <ctl name="SPK DAC Switch" value="1" />
     </path>
+<!-- [All][Main][Audio][DMS][5638146][LewisChen] 20140617 end -->
+<!-- [All][Main][Audio][DMS][5495195][LewisChen] 20140526 end -->
 
     <path name="speaker-and-headphones-skuf">
         <path name="headphones" />
@@ -982,6 +1037,7 @@
         <path name="handset-mic" />
     </path>
 
+<!-- [All][Main][Voice][DMS05852691][40952][LuboLu] Fine tune camcorder mic gain. 20140709 begin -->
     <path name="camcorder-mic">
         <ctl name="AIF1_CAP Mixer SLIM TX1" value="1"/>
         <ctl name="SLIM_0_TX Channels" value="One" />
@@ -991,6 +1047,7 @@
         <ctl name="DEC1 MUX" value="ADC1" />
         <ctl name="IIR1 INP1 MUX" value="DEC1" />
     </path>
+<!-- [All][Main][Voice][DMS05852691][40952][LuboLu] 20140709 end -->
 
     <path name="hdmi-tx">
         <path name="handset-mic" />
@@ -1100,6 +1157,7 @@
 
     <!-- TTY devices -->
 
+<!-- B[All][Main][Audio][DMS05846373][42625][LuboLu] Fix TTY IOT issue. 20140812 begin -->
     <path name="tty-headphones-lite">
         <ctl name="SLIM RX1 MUX" value="AIF1_PB" />
         <ctl name="SLIM RX2 MUX" value="AIF1_PB" />
@@ -1111,6 +1169,7 @@
         <ctl name="HPHL DAC Switch" value="1" />
         <ctl name="HPHR DAC Switch" value="1" />
     </path>
+<!-- B[All][Main][Audio][DMS05846373][42625][LuboLu] 20140812 end -->
 
     <path name="tty-headphones">
         <path name="tty-headphones-lite" />
@@ -1168,4 +1227,3 @@
     </path>
 
 </mixer>
-

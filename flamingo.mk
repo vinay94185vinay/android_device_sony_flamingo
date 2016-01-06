@@ -88,7 +88,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Sony default overrides
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.semc.version.sw=1285-1179 \
-    ro.semc.version.sw_revision=18.4.C.1.29 \
+    ro.semc.version.sw_revision=18.5.B.0.26 \
     ro.semc.version.sw_variant=GENERICSS-HSPA \
     ro.semc.version.sw_type=$(TARGET_BUILD_TYPE)
 
