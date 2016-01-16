@@ -16,7 +16,7 @@
 include device/sony/msm8226-common/BoardConfigCommon.mk
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := D2203,flamingo
+TARGET_OTA_ASSERT_DEVICE := D2212,flamingo
 
 TARGET_SPECIFIC_HEADER_PATH += device/sony/flamingo/include
 
